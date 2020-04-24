@@ -27,7 +27,8 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        for i in nums[-k:]:
-            nums.remove(i)
-            nums.insert(0,i)
-        return nums
+        i=0
+        while(i<k):
+            nums.insert(0,nums[-1])
+            nums.pop(-1)
+            i+=1
