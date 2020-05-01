@@ -35,3 +35,6 @@ class Solution:
             if i==nums[index]:
                nums.remove(i)
         return len(nums)
+
+    
+    
