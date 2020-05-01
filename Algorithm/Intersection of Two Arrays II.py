@@ -27,3 +27,6 @@ class Solution:
                 Out.append(i)
                 nums2.remove(i)
         return Out
+
+    
+    
