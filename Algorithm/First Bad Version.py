@@ -15,3 +15,19 @@ call isBadVersion(4) -> true
 
 Then 4 is the first bad version. 
 """
+class Solution:
+    def firstBadVersion(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        if isBadVersion(1):
+            return 1
+        r,l=1,n
+        while (r<l):
+            m=(r+l)//2
+            if isBadVersion(m):
+                l=m
+            else:
+                r=m+1
+        return r 
