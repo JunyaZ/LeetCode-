@@ -20,3 +20,12 @@ The characters in J are distinct.
 Hint #1  
 For each stone, check if it is a jewel.
 """
+class Solution:
+    def numJewelsInStones(self, J: str, S: str) -> int:
+        count=0
+        for stone in S:
+            for Je in J:
+                if stone==Je:
+                    count+=1
+        return count
+        
