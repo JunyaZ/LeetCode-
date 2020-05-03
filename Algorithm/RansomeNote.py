@@ -10,3 +10,14 @@ canConstruct("a", "b") -> false
 canConstruct("aa", "ab") -> false
 canConstruct("aa", "aab") -> true
 """
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        Mag=[]
+        for i in magazine:
+            Mag.append(i)
+        for i in ransomNote:
+            try:
+                Mag.remove(i)
+            except ValueError:
+                return False
+        return True
