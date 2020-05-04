@@ -15,10 +15,6 @@ Although the above answer is in lexicographical order, your answer could be in a
 """
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
-        
-        if digits == "":
-            return []
-        
         nums_to_letters = {
             2: "abc",
             3: "def",
@@ -29,6 +25,10 @@ class Solution:
             8: "tuv",
             9: "wxyz"
         }
+        
+        if digits == "":
+            return []
+        
         
         combs = [""]
         for digit in digits:
