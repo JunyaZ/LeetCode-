@@ -12,3 +12,13 @@ Example 2:
 Input: [2,2,1,1,1,2,2]
 Output: 2
 """
+from collections import defaultdict
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        Dict=defaultdict(int)
+        for i in nums:
+            Dict[i]+=1
+        for i in Dict:
+            if Dict[i]>len(nums)/2:
+                return i
+        
