@@ -12,3 +12,14 @@ Example 2:
 Input: 14
 Output: false
 """
+class Solution:
+    def isPerfectSquare(self, num: int) -> bool:
+        if num==1:
+            return True 
+        else:
+        Bridge=num
+        while(Bridge*Bridge>num):
+            Bridge=(Bridge+num/Bridge)//2
+            if Bridge* Bridge==num:
+                return True
+        return False
