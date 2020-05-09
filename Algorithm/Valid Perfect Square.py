@@ -12,6 +12,8 @@ Example 2:
 Input: 14
 Output: false
 """
+
+
 class Solution:
     def isPerfectSquare(self, num: int) -> bool:
         if num==1:
