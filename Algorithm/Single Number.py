@@ -56,3 +56,15 @@ Output: 10
 
 Note: Your solution should run in O(log n) time and O(1) space
 """
+
+from collections import defaultdict
+class Solution:
+    def singleNonDuplicate(self, nums: List[int]) -> int:
+        Dic=defaultdict(int)
+        for i  in nums:
+            Dic[i]+=1
+        for j in Dic:
+            if Dic[j]==1:
+                return j
+        
+        
