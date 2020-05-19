@@ -13,3 +13,23 @@ Example 2:
 Input:s1= "ab" s2 = "eidboaoo"
 Output: False
 """
+class Solution:
+    def checkInclusion(self, s1: str, s2: str) -> bool:
+        if len(s1) > len(s2):
+            return False   
+        s1Counter = Counter(s1)
+        Count = Counter()
+        
+        for i in range(len(s2)):
+            Count[s2[i]] += 1
+            
+            if i >= len(s1):
+                if Count[s2[i-len(s1)]] == 1:
+                    del Count[s2[i-len(s1)]]
+                else:
+                    Count[s2[i-len(s1)]] -= 1
+                
+            if s1Counter == Count:
+                return True
+            
+        return False
