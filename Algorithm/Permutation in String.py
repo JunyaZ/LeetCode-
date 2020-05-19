@@ -12,6 +12,20 @@ Example 2:
 
 Input:s1= "ab" s2 = "eidboaoo"
 Output: False
+
+   Hide Hint #1  
+Obviously, brute force will result in TLE. Think of something else.
+   Hide Hint #2  
+How will you check whether one string is a permutation of another string?
+   Hide Hint #3  
+One way is to sort the string and then compare. But, Is there a better way?
+   Hide Hint #4  
+If one string is a permutation of another string then they must one common metric. What is that?
+   Hide Hint #5  
+Both strings must have same character frequencies, if one is permutation of another. Which data structure should be used to store frequencies?
+   Hide Hint #6  
+What about hash table? An array of size 26?
+
 """
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
